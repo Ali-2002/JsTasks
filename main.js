@@ -61,9 +61,8 @@ const dinner = [
 let isTheDinnerVegan=(arr)=>{
     let bool = true;
     arr.forEach(element => {
-        const item = Object.values(element)[1];
-        if (item != 'plant') {
-            bool = false;
+        if(element.source!=='plant'){
+            bool=false
         }
     });
     return bool;
